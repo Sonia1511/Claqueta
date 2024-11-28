@@ -368,3 +368,60 @@ form input {
 form input:hover {
     background-color: purple;
 }
+/* Para pantallas menores a 768px (tablets y móviles) */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .header {
+        height: auto;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .logo {
+        position: relative;
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .navegacion ul {
+        flex-direction: column;
+        margin: 1rem 0;
+    }
+
+    .navegacion li {
+        margin-bottom: 0.5rem;
+    }
+
+    .descripcion {
+        font-size: 1rem;
+    }
+
+    main {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    article {
+        flex-direction: column;
+    }
+
+    .imagen-float {
+        float: none;
+        width: 100%;
+        margin: 0 auto 1rem auto;
+    }
+
+    aside {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+}
