@@ -1,0 +1,370 @@
+/*
+  Nombre: Sonia Pajuelo Santos
+  Fecha: 29/nov/2024
+  Módulo: LMSGI
+  UD: LMSGI02
+  Tarea: Tarea evaluativa 2. Pagina Web(80%)
+*/
+/*Fuentes de google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Meie+Script&display=swap');
+
+/*Estilos generales del body:
+  Configuración Flexbox,
+  dirección vertical 
+  altura mínima 
+  centrado de elementos vertical y horizontalmente
+  Fondo, fuente color de fuente y eliminación de márgenes*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    margin: 0;
+    font-family: "Bebas Neue", cursive;
+    color: white;
+}
+/*Estilos generales del header:
+Estilos para el título principal en el header
+Estilos para los párrafos en el header
+Estilos para los enlaces del header*/
+header{
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header h1{
+    font-size: 3rem;
+    color: dimgrey;
+    text-align: center;
+}
+
+header p{
+    text-align: center;
+}
+header a{
+    color:white;
+    text-decoration: none;
+    text-align:start;
+}
+
+/*Clases dentro  del header*/
+/* Estilo de la cabecera con imagen de fondo 
+Posicionamient relativo, cubrir todo el espacio,
+centrar la imagen, altura, padding, utilización
+flexbox, alineación, color de texto y decoración con sombra*/
+.header {
+    position: relative;
+    background-image: url('../Imagenes/cabecera.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 300px;
+    padding: 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between; 
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Añade sombra al texto */
+}
+
+/*Posiciona el logo en la parte superior izquierda
+ Configuración de márgenes, tamaño y color de fuente y
+ decoración de la misma*/
+.logo{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 5rem;
+}
+   
+/*Estilo para el título central, la descripción y presentación.
+Configuracion del margen, tamaño fuente, estilo, familia,alineación*/
+.titulo{
+    margin:0;
+    font-size: 4rem;
+    text-align: center;
+    
+}
+.descripcion {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.presentacion {
+    font-family: "Meie Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+/*Clases menu navegacion: Utilización de flexbox,
+alineaciión, margen y padding. Configuración de fuente,
+color de fondo...*/
+.navegacion ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    margin:10px 0 0 0 ;
+}
+.navegacion li{
+    list-style: none;
+    padding: 0 15px;
+}
+.navegacion a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+.navegacion a:hover{
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/*Estilos de la barra de navegacion*/
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    margin: 10;
+}
+nav li{
+    padding: 1em;
+    font-size: 1.5rem;
+}
+nav ul li{
+    list-style: none;    
+}
+nav ul a{
+    text-decoration: none;
+    color: white;
+    justify-content: space-between;
+    
+}
+ul a:hover{
+    background-color: red;
+}
+
+/*Estilos del main*/
+/*Disposicion y alineacion de los elementos
+margen ,fondo, radio, color...*/
+main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    margin: auto;
+    padding-right: 1.5rem;
+    border-radius: 2px;
+    color: white; 
+}
+section {
+    
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 1rem 0;
+    padding: 1rem;
+    width: 75%;
+    box-sizing: border-box;
+}
+section h2{
+    font-size: 3rem;
+    border-bottom: solid white;
+}
+
+article {
+    display: block;
+    margin-bottom: 1rem;/*Espaciado entre articulos*/
+    padding: 1rem;
+    background-color: #222;
+    border-radius: 8px;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+article img {
+    float: left;
+    width: auto;
+    max-width: 30%;
+    height: auto;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+article a{
+    align-self: flex-end;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    padding: 5px 10px;
+    margin-top: 1rem;
+    border-radius: 5px;    
+}
+article a:hover{
+    background-color:purple;
+}
+
+/*Imagen float y texto alrededor en pantallas grandes*/
+.imagen-float{
+    float: left;
+    max-width: 30%;
+    float:left;
+    margin: 0 1rem 1rem 0;
+}
+.fin-float{
+    clear:both;
+}
+.texto{
+    display: block;
+    padding-left: 1rem;
+    text-align: justify;
+    line-height: 1.5rem;
+    font-size: 2rem;
+}
+.texto-1{
+    display: block;
+    padding-left: 1rem;
+    text-align: justify;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+}
+.texto-resumen{
+    display: block;
+    padding-top: 0.5rem;
+    text-align: justify;
+    line-height: 1rem;
+    
+}
+
+/*Clases utilizadas en la pagina estrenos*/
+.section{
+    flex: 1;
+    display: inline-flex;
+    justify-content: flex-start;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.lista{
+    list-style: none;
+    padding: 0;
+}
+.lista-li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.lista-img{
+    width: 75px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+/*Estilos del aside. Ocupa lado derecho*/
+aside{
+    position: relative;
+    width: 300px;
+    background-color: #eaeaea;
+    padding: 15px;
+    border-radius: 8px;
+}
+aside ul{
+    list-style: none;
+    padding: 0;
+}
+aside li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color:#333333
+}
+aside img{
+    width: 75px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+/*Estilos del footer*/
+footer{
+    width: 100%;
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+/*Estilos del formulario*/
+/*Centrado y diseño general*/
+/*Ocupa el ancho del contenedor
+Limita el ancho máximo
+Se centra horizontalmente*/
+form{
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #444;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: left;
+    box-sizing: border-box;
+}
+/*Espaciado entre los elementos del formulario*/
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 2 rem;
+}
+form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+/*Botón de envio*/
+form input {
+    display: block;
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 1rem;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+form input:hover {
+    background-color: purple;
+}

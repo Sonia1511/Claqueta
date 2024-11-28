@@ -1,0 +1,358 @@
+/*
+  Nombre: Sonia Pajuelo Santos
+  Fecha: 29/nov/2024
+  Módulo: LMSGI
+  UD: LMSGI02
+  Tarea: Tarea evaluativa 2. Pagina Web(80%)
+*/
+/*Estilos utilizados para la página de estrenos, películas y fichas de películas*/
+
+/*Fuentes de google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/*Estilos generales del body:
+  Configuración Flexbox,
+  dirección vertical 
+  altura mínima 
+  centrado de elementos vertical y horizontalmente
+  Fondo, fuente color de fuente y eliminación de márgenes*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    margin: 0;
+    font-family: "Bebas Neue", cursive;
+    color: white;
+}
+
+/*Estilos generales del header:
+Estilos para el título principal en el header
+Estilos para los párrafos en el header
+Estilos para los enlaces del header*/
+header{
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header h1{
+    font-size: 3rem;
+    color: dimgrey;
+    text-align: center;
+}
+header p{
+    text-align: center;
+}
+header a{
+    color:white;
+    text-decoration: none;
+    text-align:start;
+}
+
+/*Clases dentro  del header*/
+/* Estilo de la cabecera con imagen de fondo 
+Posicionamient relativo, cubrir todo el espacio,
+centrar la imagen, altura, padding, utilización
+flexbox, alineación, color de texto y decoración con sombra*/
+.header {
+    position: relative;
+    background-image: url('../Imagenes/cabecera.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 300px;
+    padding: 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between; 
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Añade sombra al texto */
+}
+
+/*Posiciona el logo en la parte superior izquierda
+ Configuración de márgenes, tamaño y color de fuente y
+ decoración de la misma*/
+.logo{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 5rem;
+}
+
+/*Estilo para el título central, la descripción y presentación.
+Configuracion del margen, tamaño fuente, estilo, familia,alineación*/
+.titulo{
+    margin:0;
+    font-size: 4rem;
+    text-align: center;
+    
+}
+.descripcion {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/*Clases menu navegacion: Utilización de flexbox,
+alineaciión, margen y padding. Configuración de fuente,
+color de fondo...*/
+.navegacion ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    margin:10px 0 0 0 ;
+}
+.navegacion li{
+    list-style: none;
+    padding: 0 15px;
+}
+.navegacion a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+.navegacion a:hover{
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/*Estilos de la barra de navegacion*/
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    margin: 10;
+}
+nav li{
+    padding: 1em;
+    font-size: 1.5rem;
+}
+nav ul li{
+    list-style: none;    
+}
+nav ul a{
+    text-decoration: none;
+    color: white;
+    justify-content: space-between;
+    
+}
+ul a:hover{
+    background-color: red;
+}
+
+/*Estilos del main*/
+/*Disposicion y alineacion de los elementos
+margen ,fondo, radio, color...*/
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    padding-right: 1.5rem;
+    border-radius: 2px;
+    color: white; 
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+    margin: 1rem 0;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+  
+section h2{
+    font-size: 3rem;
+    border-bottom: solid white;
+}
+
+article {
+    display: block;
+    margin-bottom: 1rem;/*Espaciado entre articulos*/
+    padding: 1rem;
+    background-color: #222;
+    border-radius: 8px;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+article img {
+    float: left;
+    width: auto;
+    max-width: 30%;
+    height: auto;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+article a{
+    align-self: flex-end;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    margin-top: 1rem;
+    border-radius: 5px;    
+}
+
+/*Clases utilizadas en la pagina estrenos y películas*/
+.titulo-body{
+    color: #333;
+    font-size: 5rem;
+    text-decoration:overline;
+    text-shadow: #ddd 2px 2px 2px;
+}
+.section{
+    flex: 1;
+    display: inline-flex;
+    justify-content: flex-start;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.lista{
+    list-style: none;
+    padding: 0;
+}
+.lista-li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.lista-img{
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/*Estilos para la tabla*/
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1.2rem;
+    text-align: left;
+    color: white;
+}
+
+th, td {
+    padding: 12px 15 px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+tr {
+    background-color: #222;
+}
+
+/*Estilos del aside. Ocupa lado derecho*/
+aside{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #eaeaea;
+    padding: 1rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    color: #333333;
+    box-sizing: border-box;
+    height: 100vh;
+}
+aside ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+aside li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48%;
+    margin-bottom: 1rem;
+}
+aside img{
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 0.5;
+}
+/*Elemento nuevo no visto en la unidad*/
+.animacion {
+    animation-name: mover;
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+@keyframes mover{
+    0%{
+        transform: translateX(-100);
+        opacity: 0;
+    }100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/*Estilos del footer*/
+footer{
+    width: 100%;
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+/*Para que la página sea responsiva*/
+@media (min-width: 768px){
+    main{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    section{
+        width: 70%;
+    }
+    aside{
+        width: 25%;
+        margin-left: auto;
+    }
+}
+@media (min-width: 768px) { 
+    .article-peliculas, 
+    article { width: 48%; /* Ancho de cada artículo */ 
+    }
+}
+@media (min-width: 768px) { 
+    aside { 
+        width: 25%; 
+        margin-left: auto; 
+    } 
+}
